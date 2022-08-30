@@ -2,6 +2,7 @@
   position: relative;
   width: 390px;
   height: 370px;
+  margin-left: 2rem;
   /* background: #ff0000; */
   border-radius: 6px;
   background: #ffffff;
@@ -32,7 +33,7 @@
       .line-chart {
         position: relative;
         width: 390px;
-        height: 370px;
+        height: 390px;
         /* background: #ff0000; */
       }
   }

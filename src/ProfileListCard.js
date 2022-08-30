@@ -13,10 +13,6 @@ import Tooltip from "@mui/material/Tooltip";
 import ListItemText from "@mui/material/ListItemText";
 import Badge from "@mui/material/Badge";
 
-import Image1 from "./images/profile-pic-02.jpg";
-import Image2 from "./images/profile-pic-03.jpg";
-import Image3 from "./images/profile-pic-04.jpg";
-
 const ProfileListCard = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);

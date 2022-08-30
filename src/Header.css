@@ -3,16 +3,61 @@ body {
   box-sizing: border-box;
   background-color: #0000000a;
 }
+
+/* sidebar property */
+
+.Dashboard {
+  position: relative;
+  width: 100%;
+  height: 120vh;
+}
+.Dashboard h2 {
+  position: relative;
+  padding: 0 2rem;
+  width: 100%;
+  height: 60px;
+  background: #3c3b54;
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+.Dashboard ul li {
+  position: relative;
+  line-height: 5rem;
+  text-decoration: none;
+  list-style: none;
+  margin-top: 2rem;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: -40px;
+  padding-left: 29px;
+}
+.Dashboard ul li:hover {
+  background: #3c3b54;
+}
+.Dashboard ul li:hover ion-icon {
+  color: #635fe0;
+}
+.Dashboard ul li ion-icon {
+  font-size: 24px;
+  padding-right: 1.5rem;
+  vertical-align: middle;
+}
+
+/* navbar property */
 nav {
   height: 60px;
+  width: 100%;
   background: #fff;
   display: flex;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
   z-index: 100;
   padding: 1rem 1rem;
   box-shadow: 0px 2px 6px #0000000a;
-  grid-area: nav;
 }
 nav .ul {
   position: relative;
@@ -38,9 +83,6 @@ nav .ul li {
   transition: 0.8s;
 }
 .hide {
-  transition: 2s linear !important;
-  opacity: 1s;
-  transition-delay: 1s !important;
   display: none;
 }
 .MainBody .ul2 label .inputBox {
@@ -70,15 +112,6 @@ nav .ul li {
 input[type="text"] {
   padding-left: 3.2rem;
 }
-.section {
-  position: relative;
-  float: left;
-  width: 280px;
-  height: 100vh;
-  background-color: #43425d;
-  display: none;
-  transition: 2s linear;
-}
 .MainBody nav .ul2 button {
   font-size: 30px;
   border: none;
@@ -92,33 +125,47 @@ input[type="text"] {
   left: 0;
   top: 0;
   bottom: 0;
+  position: fixed;
+  float: left;
+  width: 280px;
+  height: 135vh;
+  background-color: #43425d;
+  transition: 2s;
+  z-index: 100;
+  /* transition: .5s linear; */
+}
+.section {
   position: relative;
   float: left;
   width: 280px;
-  height: 155vh;
+  height: 135vh;
   background-color: #43425d;
-  transition: 2s;
-  
+  display: none;
 }
 .MainBody {
   position: relative;
   z-index: 99;
+  /* height: 120vh; */
+}
+.home {
+  position: relative;
   display: grid;
-  height: 120vh;
+  height: 100vh;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 0.3fr 0.5fr 1.6fr;
+  grid-template-rows: 0.3fr 1.5fr 1.6fr;
   grid-template-areas:
-    "nav nav nav"
     "header header header"
     "chart pie-chart profile"
     "list-chart list-chart video";
   grid-gap: 1.5rem;
+  /* margin-top: 70px; */
 }
 .head {
   position: relative;
   background: transparent;
   grid-area: header;
   height: 80px;
+  margin-top: 70px;
 }
 .heading {
   display: flex;
@@ -156,9 +203,8 @@ input[type="text"] {
 }
 .MainBody .chart {
   grid-area: chart;
-  margin-left: 2rem;
+  margin-left: 0rem;
   height: 360px;
-  /* margin-bottom: 5rem; */
 }
 .MainBody .pie-chart {
   grid-area: pie-chart;
@@ -169,8 +215,6 @@ input[type="text"] {
 }
 .MainBody .list-chart {
   grid-area: list-chart;
-  margin-left: 2rem;
-  margin-bottom: 2rem;
   margin-top: -9rem;
 }
 .MainBody .video {
@@ -205,7 +249,7 @@ input[type="text"] {
 }
 
 @media only screen and (max-width: 667px) {
-  .MainBody {
+  .home {
     grid-template-columns: 1fr;
     grid-template-rows: 0.4fr 0.4fr 2.2 fr 1.2fr 1.2fr 1fr;
     grid-template-areas:
@@ -219,17 +263,14 @@ input[type="text"] {
   }
   .MainBody .chart {
     grid-area: chart;
-    margin-left: 2rem;
-    height: 370px;
+    height: 390px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .MainBody .pie-chart {
     grid-area: pie-chart;
-    margin-left: 6rem;
-    width: 360px;
-    height: 370px;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -239,12 +280,12 @@ input[type="text"] {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 550px;
   }
   .MainBody .list-chart {
     grid-area: list-chart;
-    margin-left: 2rem;
-    margin-bottom: 2rem;
     margin-top: 1rem;
+    height: 420px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -258,21 +299,20 @@ input[type="text"] {
   #transaction {
     display: none;
   }
-  .ul3 select{
+  .ul3 select {
     display: none;
   }
-  nav{
+  nav {
     padding: 0 0.1rem;
   }
-  nav ul li{
+  nav ul li {
     padding: 0 0.4rem !important;
   }
-  .inputBox{
-      width: 220px !important;
-      height: 30px !important;
+  .inputBox {
+    width: 180px !important;
+    height: 30px !important;
   }
   input::placeholder {
-    padding-left: 3.2rem;
     font-size: 10px !important;
   }
   input[type="text"] {
@@ -287,6 +327,7 @@ input[type="text"] {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding-right: 7rem;
+    padding-right: 5rem;
+    padding-right: 2rem;
   }
 }

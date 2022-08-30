@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
-import SideData from "./sider";
 import Image from "./images/profile-pic.jpg";
 import ProfileListCard from "./ProfileListCard";
 import ListChart from "./listChart";
@@ -13,7 +12,7 @@ import LineChart from "./LineChart";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import NotesIcon from '@mui/icons-material/Notes';
+import NotesIcon from "@mui/icons-material/Notes";
 
 const Header = () => {
   const [isNav, SetIsNav] = useState(false);
@@ -31,7 +30,32 @@ const Header = () => {
   return (
     <>
       <div className={isNav ? "sector" : "section"}>
-        <SideData />
+        <div className="Dashboard">
+          <h2>
+            ACME{" "}
+            <span onClick={() => SetIsNav(!isNav)}>
+              {" "}
+              <ion-icon name="close-outline"></ion-icon>
+            </span>
+          </h2>
+          <ul>
+            <li>
+              <ion-icon name="home-outline"></ion-icon> Home
+            </li>
+            <li>
+              <ion-icon name="grid-outline"></ion-icon> Dashboard
+            </li>
+            <li>
+              <ion-icon name="chatbox-outline"></ion-icon> Inbox
+            </li>
+            <li>
+              <ion-icon name="reader-outline"></ion-icon> Products
+            </li>
+            <li>
+              <ion-icon name="settings-outline"></ion-icon> Admin
+            </li>
+          </ul>
+        </div>
       </div>
       <div className="MainBody">
         <nav>
@@ -41,7 +65,7 @@ const Header = () => {
                 {isNav ? (
                   <ion-icon name="close-outline"></ion-icon>
                 ) : (
-                  <NotesIcon style={{fontSize: '30px'}}  id='barIcon'/>
+                  <NotesIcon style={{ fontSize: "30px" }} id="barIcon" />
                 )}
               </button>
             </li>
@@ -69,10 +93,8 @@ const Header = () => {
           <ul className="ul ul3">
             <li>
               <ProfileListCard />
-              {/* <ion-icon name="notifications-outline"></ion-icon> */}
             </li>
             <li>
-              {/* <ProfileListCard /> */}
               <select>
                 <option hidden>John Doe</option>
                 <option>David Kames</option>
@@ -112,44 +134,42 @@ const Header = () => {
                   <ion-icon name="log-out-outline"></ion-icon> Logout
                 </MenuItem>
               </Menu>
-              {/* </div> */}
-
-              {/* <a href="#"><img src={Image} alt="image" className="profile-image"/></a> */}
             </li>
             <li></li>
           </ul>
         </nav>
-
-        <div className="head">
-          <div className="heading">
-            <div className="overview">
-              <h3>Overview</h3>
-            </div>
-            <div className="add-fund">
-              <button>
-                Add Funds
-                <span>
-                  <ion-icon name="add-circle-outline"></ion-icon>
-                </span>
-              </button>
+        <div className="home">
+          <div className="head">
+            <div className="heading">
+              <div className="overview">
+                <h3>Overview</h3>
+              </div>
+              <div className="add-fund">
+                <button>
+                  Add Funds
+                  <span>
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                  </span>
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="chart">
-          <LineChart />
-        </div>
-        <div className="pie-chart">
-          <PieChart />
-        </div>
-        <div className="profile">
-          <Profile />
-        </div>
+          <div className="chart">
+            <LineChart />
+          </div>
+          <div className="pie-chart">
+            <PieChart />
+          </div>
+          <div className="profile">
+            <Profile />
+          </div>
 
-        <div className="list-chart">
-          <ListChart />
-        </div>
-        <div className="video">
-          <Video />
+          <div className="list-chart">
+            <ListChart />
+          </div>
+          <div className="video">
+            <Video />
+          </div>
         </div>
       </div>
     </>
