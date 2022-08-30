@@ -1,0 +1,116 @@
+.profile-card {
+  width: 360px;
+  height: 480px;
+  background: #ffffff;
+  box-shadow: 0px 2px 6px #0000000a;
+  margin-left: 1rem;
+  margin-right: 2rem;
+  border-radius: 6px;
+}
+.profile-card .profile-head {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  /* background: #ff0000; */
+}
+.profile-card .profile-head .profile-img {
+  width: 100%;
+  position: relative;
+  height: 240px;
+  /* background: #ff0000; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.profile-card .profile-head .profile-img a > img {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.profile-card .profile-head .profile-img .pen {
+  position: absolute;
+  background: #514ddc;
+  color: #ffffff;
+  border-radius: 50%;
+  margin: -25px 45px;
+  width: 23px;
+  height: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fff;
+}
+.profile-card .profile-head .profile-img .icon {
+  padding: 0 0.5rem;
+}
+.profile-card .profile-head .profile-img h3 {
+  font-size: medium;
+  text-align: center;
+  top: 0;
+  position: relative;
+  margin-bottom: 3px;
+}
+
+/* profile-body content is here */
+.profile-card .profile-body {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  /* background: #514ddc; */
+  margin-top: 7px;
+}
+.profile-card .profile-body .user-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+.profile-card .profile-body .user-heading h6 {
+  position: relative;
+  font-size: small;
+  font-weight: 600;
+  color: #4d4f5c;
+}
+.profile-card .profile-body .user-heading .three-dot-icon {
+  position: relative;
+  font-size: 20px;
+  color: #4d4f5c;
+  cursor: pointer;
+}
+.profile-card .profile-body .profile-data-2 {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .3rem 2rem;
+}
+.profile-card .profile-body .profile-data-2 .profile-logo-2 a > img {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.profile-card .profile-body .profile-data-2 .profile-heading-2{
+    position: relative;
+    margin-left: -4rem
+}
+.profile-card
+  .profile-body
+  .profile-data-2
+  .profile-heading-2
+  .profile-heading-main
+  h4 {
+  position: relative;
+  font-size: medium;
+}
+.profile-card
+  .profile-body
+  .profile-data-2
+  .profile-heading-2
+  .profile-heading-sub
+  h6 {
+  position: relative;
+  font-size: 10px;
+}

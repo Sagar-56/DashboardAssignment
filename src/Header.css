@@ -1,0 +1,292 @@
+body {
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #0000000a;
+}
+nav {
+  height: 60px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  z-index: 100;
+  padding: 1rem 1rem;
+  box-shadow: 0px 2px 6px #0000000a;
+  grid-area: nav;
+}
+nav .ul {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 1rem;
+  list-style: none;
+  align-items: center;
+}
+nav .ul li {
+  position: relative;
+  padding: 0 1rem;
+}
+
+.MainBody .ul2 label input {
+  width: 30px;
+  height: 35px;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  border-radius: 50%;
+  transition: 0.8s;
+}
+.hide {
+  transition: 2s linear !important;
+  opacity: 1s;
+  transition-delay: 1s !important;
+  display: none;
+}
+.MainBody .ul2 label .inputBox {
+  width: 320px;
+  height: 35px;
+  background: #e8e8e8;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+}
+.MainBody .ul2 label ion-icon {
+  position: absolute;
+  font-size: 20px;
+  color: #a3a6b4;
+  display: flex;
+  align-items: center;
+  height: 35px;
+  padding-left: 0.5rem;
+  cursor: pointer;
+}
+.MainBody .ul2 label input::placeholder {
+  font-size: 14px;
+  color: rgb(79, 76, 76);
+  padding-left: 0.2rem;
+  font-family: "Poppins", sans-serif;
+}
+input[type="text"] {
+  padding-left: 3.2rem;
+}
+.section {
+  position: relative;
+  float: left;
+  width: 280px;
+  height: 100vh;
+  background-color: #43425d;
+  display: none;
+  transition: 2s linear;
+}
+.MainBody nav .ul2 button {
+  font-size: 30px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  color: #3c3b54;
+  /* transition: 2s; */
+}
+.sector {
+  display: block;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  position: relative;
+  float: left;
+  width: 280px;
+  height: 155vh;
+  background-color: #43425d;
+  transition: 2s;
+  
+}
+.MainBody {
+  position: relative;
+  z-index: 99;
+  display: grid;
+  height: 120vh;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 0.3fr 0.5fr 1.6fr;
+  grid-template-areas:
+    "nav nav nav"
+    "header header header"
+    "chart pie-chart profile"
+    "list-chart list-chart video";
+  grid-gap: 1.5rem;
+}
+.head {
+  position: relative;
+  background: transparent;
+  grid-area: header;
+  height: 80px;
+}
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 5rem;
+}
+.head .heading .overview h3 {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  font-weight: bold;
+  position: relative;
+  top: 0.6rem;
+}
+.head .heading {
+  display: flex;
+  height: 60px;
+}
+.head .heading .add-fund button {
+  position: relative;
+  top: 2rem;
+  width: 130px;
+  height: 38px;
+  background: #514ddc;
+  border: #514ddc;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 16px;
+}
+.head .heading .add-fund ion-icon {
+  position: relative;
+  vertical-align: middle;
+  margin-left: 0.6rem;
+}
+.MainBody .chart {
+  grid-area: chart;
+  margin-left: 2rem;
+  height: 360px;
+  /* margin-bottom: 5rem; */
+}
+.MainBody .pie-chart {
+  grid-area: pie-chart;
+  height: 370px;
+}
+.MainBody .profile {
+  grid-area: profile;
+}
+.MainBody .list-chart {
+  grid-area: list-chart;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+  margin-top: -9rem;
+}
+.MainBody .video {
+  grid-area: video;
+}
+.MainBody nav .ul3 li a .profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#basic-menu .menuitem {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+#basic-menu .menuitem ion-icon {
+  margin-right: 1rem;
+  font-size: 20px;
+}
+
+.MainBody nav .ul3 li select {
+  width: 100px;
+  font-size: 17px;
+  border: none;
+  outline: none;
+}
+.MainBody nav .ul3 li select option {
+  font-size: 12px;
+  width: 120px;
+  height: 100px;
+}
+
+@media only screen and (max-width: 667px) {
+  .MainBody {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 2.2 fr 1.2fr 1.2fr 1fr;
+    grid-template-areas:
+      "nav"
+      "header"
+      "profile"
+      "chart"
+      "pie-chart"
+      "list-chart"
+      "video";
+  }
+  .MainBody .chart {
+    grid-area: chart;
+    margin-left: 2rem;
+    height: 370px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .MainBody .pie-chart {
+    grid-area: pie-chart;
+    margin-left: 6rem;
+    width: 360px;
+    height: 370px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .MainBody .profile {
+    grid-area: profile;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .MainBody .list-chart {
+    grid-area: list-chart;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .MainBody .video {
+    grid-area: video;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #transaction {
+    display: none;
+  }
+  .ul3 select{
+    display: none;
+  }
+  nav{
+    padding: 0 0.1rem;
+  }
+  nav ul li{
+    padding: 0 0.4rem !important;
+  }
+  .inputBox{
+      width: 220px !important;
+      height: 30px !important;
+  }
+  input::placeholder {
+    padding-left: 3.2rem;
+    font-size: 10px !important;
+  }
+  input[type="text"] {
+    font-size: 10px;
+  }
+  .MainBody .ul2 label ion-icon {
+    font-size: 18px;
+    height: 30px;
+    padding-left: 0.4rem;
+  }
+  .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-right: 7rem;
+  }
+}
